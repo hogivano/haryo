@@ -20,6 +20,10 @@ Route::post('login', 'UserController@login')->name('login.submit');
 Route::get('register', 'HomeController@register')->name('register');
 Route::post('register', 'UserController@register')->name('register.submit');
 
+Route::get('coba', function(){
+    return view('detail-image');
+});
+
 Route::group(['prefix' => 'admin', 'middleware' => 'auth:admin'], function(){
     Route::get('dashboard', 'AdminController@dashboard')->name('admin.dashboard');
     Route::get('logout', 'UserController@logout')->name('admin.logout');
@@ -40,11 +44,22 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth:admin'], function(){
         Route::post('edit/{id}', 'AlbumController@albumEdit')->name('admin.album.update');
         Route::post('new', 'AlbumController@albumCreate')->name('admin.album.create');
         Route::post('delete', 'AlbumController@albumDelete')->name('admin.album.delete');
+        Route::post('upload', 'AlbumController@uploadImages')->name('admin.album.upload');
+    });
+
+    Route::group(['prefix' => 'video'], function(){
+        Route::get('/', 'VideoController@videoIndex')->name('admin.video.index');
+        Route::get('new', 'VideoController@videoNew')->name('admin.video.new');
+        Route::get('edit/{id}', 'VideoController@videoEdit')->name('admin.video.edit');
+        Route::post('new', 'VideoController@videoCreate')->name('admin.video.create');
+        Route::post('edit/{id}', 'VideoController@videoUpdate')->name('admin.video.update');
+        Route::post('delete', 'VideoController@videoDelete')->name('admin.video.delete');
     });
 
     Route::group(['prefix' => 'slide-show'], function(){
         Route::get('/', 'SlideShowController@slideShowIndex')->name('admin.slide-show.index');
-        Route::get('new', 'SlideShowController@slideShowNew')->name('admin.slide-show.new');
-        Route::post('new', 'SlideShowController@slideShowSubmit')->name('admin.slide-show.submit');
+        Route::post('change', 'SlideShowController@slideShowChange')->name('admin.slide-show.change');
     });
+
+    Route::post('logout', 'UserController@logout')->name('login.logout');
 });

@@ -1,6 +1,6 @@
 @extends('admin.layout.master')
 @section('title')
-Kategori Edit
+Kategori
 @endsection
 @section('brand')
 <a class="navbar-brand" href="{{ route('admin.kategori.index') }}">Kategori</a>

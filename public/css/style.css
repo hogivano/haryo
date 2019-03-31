@@ -1,3 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html body {
+    height: 100%;
+    width: 100%;
+}
+
+body::before {
+    opacity: .33;
+    background: #000;
+}
+
+h1, h2, h3 {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+}
+
+.full-100p{
+    width: 100%;
+    height: 100%;
+}
+
+.bg-black {
+    background-image: linear-gradient(#444444, #303030, #262626);
+}
+
+.bg-photography {
+    background-image: url('/img/photography.jpg');
+    object-fit: cover;
+    background-position: center;
+}
+
+
+.hero {
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    position: relative;
+    background-color: blue;
+}
+.hh {
+    background-image: linear-gradient(#444444, #303030, #262626);
+    background-size: cover;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.9;
+}
+
+.text-white {
+    color: #f7f7f7;
+}
+
+.width-200{
+    width: 200px;
+}
+
+.width-400{
+    width: 400px;
+}
+
+.width-600{
+    width: 600px;
+}
+
+.width-40p{
+    width: 40%;
+}
+
+.width-60p{
+    width: 60%;
+}
+
+.width-80p{
+    width: 80%;
+}
+
+.width-100p{
+    width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.margin-auto {
+    margin: auto;
+}
+
+.m-v-10 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.m-v-20 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.m-v-30 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.m-b-10{
+    margin-bottom: 10px;
+}
+
+.m-b-20{
+    margin-bottom: 20px;
+}
+
+.m-b-30{
+    margin-bottom: 30px;
+}
+
+.input-outline-light{
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    color: #fff;
+    padding: 8px 12px;
+    height: 40px;
+    box-shadow: none;
+}
+.input-outline-light::selection {
+    background-color: transparent;
+}
+
+.btn-none {
+    padding: 0;
+    border-style:none;
+}
+
+.btn-outline-light {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: white;
+}
+
+.btn-outline-light:hover{
+    background-color: #fff !important;
+    border-color: #fff;
+    color: #444444;
+}
+
+.parent-middle {
+    position: relative;
+}
+
+.child-middle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 50%;
+    height: 30%;
+    margin: auto;
+}
+
 @media (min-width: 992px){
     .typo-line{
         padding-left: 140px;

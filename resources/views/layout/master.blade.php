@@ -14,17 +14,21 @@
     <link rel="stylesheet" href="{{ asset('css/pe-icon-7-stroke.css') }}">
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Mukta|Noto+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     @yield('link')
 </head>
-<body>
+<body class="">
     @yield('content')
 </body>
 <script src="{{ asset('js/jquery.3.2.1.min.js') }}" charset="utf-8"></script>
-<script src="{{ asset('js/fullpage.js') }}" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.js" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.extensions.min.js" charset="utf-8"></script>
 <script src="{{ asset('js/chartist.min.js') }}" charset="utf-8"></script>
 <script src="{{ asset('js/bootstrap.min.js') }}" charset="utf-8"></script>
 <script src="{{ asset('js/bootstrap-select.js') }}" charset="utf-8"></script>
 <script src="{{ asset('js/bootstrap-notify.js') }}" charset="utf-8"></script>
 <script src="{{ asset('js/light-bootstrap-dashboard.js') }}" charset="utf-8"></script>
+<script src="{{ asset('js/anime.min.js') }}" charset="utf-8"></script>
 @yield('script')
 </html>

@@ -25,25 +25,31 @@
                     <img src="{{ asset('img/logo-putih.png') }}" height="80" alt="">
                 </div>
                 <ul class="nav">
-                    <li class="active">
+                    <li id="nav-dashboard">
                         <a href="{{ route('admin.dashboard') }}">
                             <i class="pe-7s-graph"></i>
                             <p>Dashboard</p>
                         </a>
                     </li>
-                    <li>
+                    <li id="nav-album">
                         <a href="{{ route('admin.album.index') }}">
                             <i class="pe-7s-photo-gallery"></i>
                             <p>Album</p>
                         </a>
                     </li>
-                    <li>
+                    <li id="nav-kategori">
                         <a href="{{ route('admin.kategori.index') }}">
                             <i class="pe-7s-ribbon"></i>
                             <p>Kategori</p>
                         </a>
                     </li>
-                    <li>
+                    <li id="nav-video">
+                        <a href="{{ route('admin.video.index') }}">
+                            <i class="pe-7s-video"></i>
+                            <p>Video</p>
+                        </a>
+                    </li>
+                    <li id="nav-slide-show">
                         <a href="{{ route('admin.slide-show.index') }}">
                             <i class="pe-7s-monitor"></i>
                             <p>Slide Show</p>
@@ -128,7 +134,7 @@
                                   </ul>
                             </li> -->
                             <li>
-                                <a href="#">
+                                <a href="{{ route('login.logout') }}">
                                     <p>Log out</p>
                                 </a>
                             </li>

@@ -13,15 +13,21 @@ class SlideShowController extends Controller
         return view('admin.slide-show.index', compact('album'));
     }
 
-    public function slideShowNew(){
-        return view('admin.slide-show.new');
-    }
+    public function slideShowChange(Request $req){
+        if ($req->slide_show == 1) {
+            $change = Album::where('id', $req->id)->update([
+                'slide_show' => 0
+            ]);
+        } else if ($req->slide_show == 0){
+            $change = Album::where('id', $req->id)->update([
+                'slide_show' => 1
+            ]);
+        }
 
-    public function slideShowSubmit(Request $req){
-        $update = Album::where('id', $req->id)->update([
-            'slide_show' => 1
-        ]);
-
-        return redirect()->route('admin.slide-show.index');
+        if ($req->route == 'album'){
+            return redirect()->route('admin.album.index');
+        } else if ($req->route == 'slide-show'){
+            return redirect()->route('admin.slide-show.index');
+        }
     }
 }

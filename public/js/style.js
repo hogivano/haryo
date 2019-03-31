@@ -261,3 +261,22 @@ demo = {
 
 
 }
+$(document).ready(function(){
+    var url = window.location.href;
+    if (url.includes('album')){
+        $('.nav li').removeClass('active');
+        $('#nav-album').addClass('active');
+    } else if (url.includes('kategori')){
+        $('.nav li').removeClass('active');
+        $('#nav-kategori').addClass('active');
+    } else if (url.includes('video')){
+        $('.nav li').removeClass('active');
+        $('#nav-video').addClass('active');
+    } else if (url.includes('slide-show')){
+        $('.nav li').removeClass('active');
+        $('#nav-slide-show').addClass('active');
+    } else if (url.includes('dashboard')){
+        $('.nav li').removeClass('active');
+        $('#nav-dashboard').addClass('active');
+    }
+});
